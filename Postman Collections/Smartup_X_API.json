@@ -1,14 +1,14 @@
 {
 	"info": {
 		"_postman_id": "cca2d91c-db1e-4596-9ab7-9108eda312ff",
-		"name": "Smartup X API Documentation",
+		"name": "Smartup API Documentation",
 		"description": "#### Overview:\n\n* * *\n\n> This is official **API** documenation of **Smartup X** system.\n\nSmartup X works with `HTTPS` protocol as well as uses **JSON** and **XML** data formats. All the requests and responses are based on `HTTP` methods.\n\n**Authorization** in the Smartup X system takes place according to the **Basic Auth principle**.  \n**Basic** - the simplest scheme, in which the user's login and password are passed in the **Authorization header** in unencrypted form (*base64-encoded*). However, when using the `HTTPS` (HTTP over SSL) protocol, it is relatively secure.\n\n![](https://storage.crisp.chat/users/helpdesk/website/29775490664f3600/1_1cnfavm.png)\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| username | string | yes | Login, that is used for authorization in Smartup X |\n| password | string | yes | Password, that is used for authorization in Smartup X |",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Inventory / Import",
-			"_postman_id": "b42cfa22-ae4a-41bd-822e-fe9f0a2d96a3",
+			"id": "b42cfa22-ae4a-41bd-822e-fe9f0a2d96a3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {}
@@ -100,7 +100,7 @@
 		},
 		{
 			"name": "Inventory / Export",
-			"_postman_id": "350cf854-7bd7-4f46-9d2c-2570be82ed7f",
+			"id": "350cf854-7bd7-4f46-9d2c-2570be82ed7f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -177,7 +177,7 @@
 		},
 		{
 			"name": "Service / Import",
-			"_postman_id": "ec9e4d55-7318-4ae8-83d2-20e7fd733476",
+			"id": "ec9e4d55-7318-4ae8-83d2-20e7fd733476",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -207,7 +207,7 @@
 		},
 		{
 			"name": "Service / Export",
-			"_postman_id": "ee6730bf-0cef-40e3-bf81-6370d8995428",
+			"id": "ee6730bf-0cef-40e3-bf81-6370d8995428",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -237,7 +237,7 @@
 		},
 		{
 			"name": "Product group / Import",
-			"_postman_id": "4861b4ac-b467-4f54-af96-7b154a510b29",
+			"id": "4861b4ac-b467-4f54-af96-7b154a510b29",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -267,7 +267,7 @@
 		},
 		{
 			"name": "Product group / Export",
-			"_postman_id": "e315a95c-bded-4070-be22-5bc75c82f5c3",
+			"id": "e315a95c-bded-4070-be22-5bc75c82f5c3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -297,7 +297,7 @@
 		},
 		{
 			"name": "Producers / Import",
-			"_postman_id": "73dc312d-5d66-425b-9a14-62ca94960d1c",
+			"id": "73dc312d-5d66-425b-9a14-62ca94960d1c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -327,7 +327,7 @@
 		},
 		{
 			"name": "Producers / Export",
-			"_postman_id": "8b7b2a89-a511-40cd-8b16-4c71e25fd8f4",
+			"id": "8b7b2a89-a511-40cd-8b16-4c71e25fd8f4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -357,7 +357,7 @@
 		},
 		{
 			"name": "Legal entity / Import",
-			"_postman_id": "256dfa04-7058-4506-a711-5915cc2956b3",
+			"id": "256dfa04-7058-4506-a711-5915cc2956b3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -387,7 +387,7 @@
 		},
 		{
 			"name": "Legal entity / Export",
-			"_postman_id": "5d38e3ed-2d69-4a63-87ff-c3948ff38b2b",
+			"id": "5d38e3ed-2d69-4a63-87ff-c3948ff38b2b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -417,7 +417,7 @@
 		},
 		{
 			"name": "Natural persons / Import",
-			"_postman_id": "1557fb70-bdeb-4b9a-af98-83c5b6a8c484",
+			"id": "1557fb70-bdeb-4b9a-af98-83c5b6a8c484",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -447,7 +447,7 @@
 		},
 		{
 			"name": "Natural persons / Export",
-			"_postman_id": "81bf2013-74d4-452b-a5a4-a30436e36dca",
+			"id": "81bf2013-74d4-452b-a5a4-a30436e36dca",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -477,7 +477,7 @@
 		},
 		{
 			"name": "Persons group / Import",
-			"_postman_id": "345cd561-3330-43e2-af2d-6478f266276c",
+			"id": "345cd561-3330-43e2-af2d-6478f266276c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -507,7 +507,7 @@
 		},
 		{
 			"name": "Persons group / Export",
-			"_postman_id": "7cd1d71c-5647-4654-8f80-1b32326b9946",
+			"id": "7cd1d71c-5647-4654-8f80-1b32326b9946",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -537,7 +537,7 @@
 		},
 		{
 			"name": "Workspaces / Export",
-			"_postman_id": "c0cd7348-2520-4a7f-9551-931f8aee7959",
+			"id": "c0cd7348-2520-4a7f-9551-931f8aee7959",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -567,7 +567,7 @@
 		},
 		{
 			"name": "Price type / Import",
-			"_postman_id": "463783f0-5ecc-401f-9cb8-9bebea7c1b95",
+			"id": "463783f0-5ecc-401f-9cb8-9bebea7c1b95",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -597,7 +597,7 @@
 		},
 		{
 			"name": "Price type / Export",
-			"_postman_id": "e438d5b8-1447-44d2-89cb-5753fb48281e",
+			"id": "e438d5b8-1447-44d2-89cb-5753fb48281e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -627,7 +627,7 @@
 		},
 		{
 			"name": "Internal movement / Import",
-			"_postman_id": "05a9b72a-19fd-405c-b569-d7e98a920037",
+			"id": "05a9b72a-19fd-405c-b569-d7e98a920037",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -657,7 +657,7 @@
 		},
 		{
 			"name": "Internal movement / Export",
-			"_postman_id": "30c1b699-8e85-4f60-924d-c2cda2c4c3ff",
+			"id": "30c1b699-8e85-4f60-924d-c2cda2c4c3ff",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -687,7 +687,7 @@
 		},
 		{
 			"name": "Stocktaking / Import",
-			"_postman_id": "78404add-3053-4810-899a-b2f15ddfe91a",
+			"id": "78404add-3053-4810-899a-b2f15ddfe91a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -717,7 +717,7 @@
 		},
 		{
 			"name": "Stocktaking / Export",
-			"_postman_id": "c876e26a-2765-4338-b759-a382892cad28",
+			"id": "c876e26a-2765-4338-b759-a382892cad28",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -747,7 +747,7 @@
 		},
 		{
 			"name": "Write-off / Import",
-			"_postman_id": "cc7f48fe-ede6-4d3d-9239-7701f5922c7d",
+			"id": "cc7f48fe-ede6-4d3d-9239-7701f5922c7d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -777,7 +777,7 @@
 		},
 		{
 			"name": "Write-off / Export",
-			"_postman_id": "8e12cd8b-f075-4371-a2b1-df09f37af3b0",
+			"id": "8e12cd8b-f075-4371-a2b1-df09f37af3b0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -807,7 +807,7 @@
 		},
 		{
 			"name": "Return to suppliers / Import",
-			"_postman_id": "5115d4e3-64f6-4d0c-a8a8-0f10225fa34f",
+			"id": "5115d4e3-64f6-4d0c-a8a8-0f10225fa34f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -837,7 +837,7 @@
 		},
 		{
 			"name": "Return to suppliers / Export",
-			"_postman_id": "92df3968-2593-45a9-8bf8-3e52a1671dd2",
+			"id": "92df3968-2593-45a9-8bf8-3e52a1671dd2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -867,7 +867,7 @@
 		},
 		{
 			"name": "Receipts to warehouse / Import",
-			"_postman_id": "d1faecb6-b44b-4350-ba4f-a1fae7e5a673",
+			"id": "d1faecb6-b44b-4350-ba4f-a1fae7e5a673",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -897,7 +897,7 @@
 		},
 		{
 			"name": "Receipts to warehouse / Export",
-			"_postman_id": "2f49222d-b0bd-4a53-a273-3508b60a8d01",
+			"id": "2f49222d-b0bd-4a53-a273-3508b60a8d01",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -927,7 +927,7 @@
 		},
 		{
 			"name": "Order / Import",
-			"_postman_id": "5959c5ee-3e7d-4362-bdf0-52658beb9207",
+			"id": "5959c5ee-3e7d-4362-bdf0-52658beb9207",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -957,7 +957,7 @@
 		},
 		{
 			"name": "Order / Export",
-			"_postman_id": "da6c0247-7a4f-4c3d-a243-5c6d407568bb",
+			"id": "da6c0247-7a4f-4c3d-a243-5c6d407568bb",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -987,7 +987,7 @@
 		},
 		{
 			"name": "Return / Import",
-			"_postman_id": "e2ec0a4f-a962-4751-a867-9028f305f42b",
+			"id": "e2ec0a4f-a962-4751-a867-9028f305f42b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1017,7 +1017,7 @@
 		},
 		{
 			"name": "Return / Export",
-			"_postman_id": "33b22837-d294-4d42-bd58-12524ccd0327",
+			"id": "33b22837-d294-4d42-bd58-12524ccd0327",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1047,7 +1047,7 @@
 		},
 		{
 			"name": "Purchase / Import",
-			"_postman_id": "ad6d64ad-f327-44bd-97e5-439e8702b9fa",
+			"id": "ad6d64ad-f327-44bd-97e5-439e8702b9fa",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1077,7 +1077,7 @@
 		},
 		{
 			"name": "Purchase / Export",
-			"_postman_id": "0836e260-f361-4ce0-bcec-a5d79f8b95e4",
+			"id": "0836e260-f361-4ce0-bcec-a5d79f8b95e4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1107,7 +1107,7 @@
 		},
 		{
 			"name": "Payments from clients / Import",
-			"_postman_id": "9798e8b7-3d20-4bdb-8b52-64bf0a152064",
+			"id": "9798e8b7-3d20-4bdb-8b52-64bf0a152064",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1137,7 +1137,7 @@
 		},
 		{
 			"name": "Payments from clients / Export",
-			"_postman_id": "fa3fbd10-7611-46fe-bca0-8b204b3d9610",
+			"id": "fa3fbd10-7611-46fe-bca0-8b204b3d9610",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1167,7 +1167,7 @@
 		},
 		{
 			"name": "Inventory price / Import",
-			"_postman_id": "0c49002a-5ec8-4fab-bd5b-d18c89864649",
+			"id": "0c49002a-5ec8-4fab-bd5b-d18c89864649",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1197,7 +1197,7 @@
 		},
 		{
 			"name": "Inventory price / Export",
-			"_postman_id": "310d319c-95b1-4121-ae4b-8b6acd0a4985",
+			"id": "310d319c-95b1-4121-ae4b-8b6acd0a4985",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1227,7 +1227,7 @@
 		},
 		{
 			"name": "Visit / Export",
-			"_postman_id": "27635c47-6241-4ee4-9d16-7ce989b347c9",
+			"id": "27635c47-6241-4ee4-9d16-7ce989b347c9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1257,7 +1257,7 @@
 		},
 		{
 			"name": "Contract / Import",
-			"_postman_id": "28d789eb-b02b-4b9c-af37-df895f15e5ce",
+			"id": "28d789eb-b02b-4b9c-af37-df895f15e5ce",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1287,7 +1287,7 @@
 		},
 		{
 			"name": "Contract / Export",
-			"_postman_id": "cc69d97f-1b7f-4ee9-8fef-740e3da488dc",
+			"id": "cc69d97f-1b7f-4ee9-8fef-740e3da488dc",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1317,7 +1317,7 @@
 		},
 		{
 			"name": "Inventory Balance / Export",
-			"_postman_id": "f0f9ae92-0c4e-4159-8b68-7b748a7e5921",
+			"id": "f0f9ae92-0c4e-4159-8b68-7b748a7e5921",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1377,7 +1377,7 @@
 	],
 	"variable": [
 		{
-			"id": "8b6f384e-9239-4263-a43b-6673ded5f8db",
+			"id": "1700ae39-13e6-4b63-b40c-b8f6587ec6b6",
 			"value": "",
 			"type": "string"
 		}
