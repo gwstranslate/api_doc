@@ -99,7 +99,7 @@
 			]
 		},
 		{
-			"name": "Inventory / Export",
+			"name": "INVENTORY / EXPORT",
 			"id": "350cf854-7bd7-4f46-9d2c-2570be82ed7f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -1377,7 +1377,7 @@
 	],
 	"variable": [
 		{
-			"id": "9a64b3d8-aeba-4cd2-aa70-f48888f69d44",
+			"id": "c6a84fa3-6a56-4530-9923-deae14d6d083",
 			"value": "",
 			"type": "string"
 		}
