@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Inventory / Import",
+			"name": "INVENTORY / IMPORT",
 			"id": "b42cfa22-ae4a-41bd-822e-fe9f0a2d96a3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
@@ -1377,7 +1377,7 @@
 	],
 	"variable": [
 		{
-			"id": "04f5ab88-57d8-42ec-a95d-8859b721e56d",
+			"id": "9a64b3d8-aeba-4cd2-aa70-f48888f69d44",
 			"value": "",
 			"type": "string"
 		}
