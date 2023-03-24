@@ -373,7 +373,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"legal_person\": [\r\n    {\r\n      \"name\": \"OOO Green White Solutions\",\r\n      \"code\": \"007\",\r\n      \"short_name\": \"GWS\",\r\n      \"region_code\": \"Tashkent\",\r\n      \"is_budgetarian\": \"Y\",\r\n      \"tin\": \"965234875\",\r\n      \"state\": \"A\",\r\n      \"primary_person_code\": \"\",\r\n      \"parent_person_code\": \"\",\r\n      \"barcode\": \"48465198\",\r\n      \"vat_code\": \"566419465165\",\r\n      \"cea\": \"\",\r\n      \"main_phone\": \"+9987112030301\",\r\n      \"email\": \"info@greenwhite.uz\",\r\n      \"web\": \"\",\r\n      \"address\": \"Tashkent, Beshagach 1\",\r\n      \"address_guide\": \"\",\r\n      \"zip_code\": \"32105\",\r\n      \"latlng\": \"\",\r\n      \"is_client\": \"\",\r\n      \"is_supplier\": \"\",\r\n      \"groups\": [\r\n        {\r\n          \"group_code\": \"\",\r\n          \"type_code\": \"\"\r\n        }\r\n      ],\r\n       \"bank_accounts\": [\r\n {\r\n          \"bank_account_id\": \"\",\r\n          \"bank_account_code\": \"\",\r\n          \"bank_account_name\": \"\",\r\n          \"is_main\": \"\",\r\n          \"currency_code\": \"\",\r\n          \"state\": \"\",\r\n          \"note\": \"\",\r\n          \"mfo\": \"\"\r\n        \r\n }\r\n]\r\n\r\n    }\r\n  ]\r\n}\r\n\r\n",
+					"raw": "{\r\n  \"legal_person\": [\r\n    {\r\n      \"name\": \"OOO Green White Solutions\",\r\n      \"code\": \"007\",\r\n      \"short_name\": \"GWS\",\r\n      \"region_code\": \"Tashkent\",\r\n      \"is_budgetarian\": \"Y\",\r\n      \"tin\": \"965234875\",\r\n      \"state\": \"A\",\r\n      \"primary_person_code\": \"\",\r\n      \"parent_person_code\": \"\",\r\n      \"barcode\": \"48465198\",\r\n      \"vat_code\": \"566419465165\",\r\n      \"cea\": \"\",\r\n      \"main_phone\": \"+9987112030301\",\r\n      \"email\": \"info@greenwhite.uz\",\r\n      \"web\": \"\",\r\n      \"address\": \"Tashkent, Beshagach 1\",\r\n      \"address_guide\": \"\",\r\n      \"zip_code\": \"32105\",\r\n      \"latlng\": \"\",\r\n      \"is_client\": \"\",\r\n      \"is_supplier\": \"\",\r\n      \"groups\": [\r\n        {\r\n          \"group_code\": \"\",\r\n          \"type_code\": \"\"\r\n        }\r\n      ],\r\n       \"bank_accounts\": [\r\n {\r\n          \"bank_account_id\": \"\",\r\n          \"bank_account_code\": \"\",\r\n          \"bank_account_name\": \"\",\r\n          \"is_main\": \"\",\r\n          \"currency_code\": \"\",\r\n          \"state\": \"\",\r\n          \"note\": \"\",\r\n          \"mfo\": \"\"\r\n        \r\n }\r\n]\r\n    }\r\n  ]\r\n}\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1377,7 +1377,7 @@
 	],
 	"variable": [
 		{
-			"id": "56b37a7a-271e-4767-9e49-41e8a2dc0c37",
+			"id": "64680cf3-ea2d-4af4-946a-c59215a0a8c6",
 			"value": "",
 			"type": "string"
 		}
