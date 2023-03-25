@@ -1123,7 +1123,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"cashin\": [\r\n    {\r\n      \"filial_code\": \"\",\r\n      \"external_id\": \"\",\r\n      \"cashin_id\": \"\",\r\n      \"cashin_time\": \"\",\r\n      \"cashin_date\": \"\",\r\n      \"cashin_number\": \"\",\r\n      \"bill_collector_code\": \"\",\r\n      \"client_code\": \"\",\r\n      \"subfilial_code\": \")\",\r\n      \"contract_code\": \"\",\r\n      \"payment_type_code\": \"\",\r\n      \"currency_code\": \"\",\r\n      \"cashbox_code\": \"\",\r\n      \"bank_account_code\": \"\",\r\n      \"amount\": \"\",\r\n      \"posted\": \"\",\r\n      \"note\": \"\",\r\n      \"bank_trans_number\": \"\",\r\n      \"bank_trans_date\": \"\",\r\n      \"purpose\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+					"raw": "{\r\n  \"cashin\": [\r\n    {\r\n      \"filial_code\": \"\",\r\n      \"external_id\": \"\",\r\n      \"cashin_id\": \"\",\r\n      \"cashin_time\": \"\",\r\n      \"cashin_date\": \"\",\r\n      \"cashin_number\": \"\",\r\n      \"bill_collector_code\": \"\",\r\n      \"client_code\": \"\",\r\n      \"subfilial_code\": \")\",\r\n      \"contract_code\": \"\",\r\n      \"payment_type_code\": \"\",\r\n      \"currency_code\": \"\",\r\n      \"cashbox_code\": \"\",\r\n      \"bank_account_code\": \"\",\r\n      \"amount\": \"\",\r\n      \"posted\": \"\",\r\n      \"note\": \"\",\r\n      \"bank_trans_number\": \"\",\r\n      \"bank_trans_date\": \"\",\r\n      \"purpose\": \"\"\r\n    }\r\n\r\n  ]\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1377,7 +1377,7 @@
 	],
 	"variable": [
 		{
-			"id": "4c51f4d8-4d30-4698-8d50-e7d7b45c7be1",
+			"id": "cd36043a-1165-4fc7-baaf-7282fd14bdc0",
 			"value": "",
 			"type": "string"
 		}
