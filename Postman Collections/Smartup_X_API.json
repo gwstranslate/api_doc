@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "cca2d91c-db1e-4596-9ab7-9108eda312ff",
 		"name": "Smartup API Documentation",
-		"description": "#### Overview:\n\n---\n\n> This is official \n  \n\nSmartup works with `HTTPS` protocol as well as uses **JSON** and **XML** data formats. All the requests and responses are based on `HTTP` methods.\n\n**Authorization** in the Smartup system takes place according to the **Basic Auth principle**.  \n**Basic** - the simplest scheme, in which the user's login and password are passed in the **Authorization header** in unencrypted form (_base64-encoded_). However, when using the `HTTPS` (HTTP over SSL) protocol, it is relatively secure.\n\n<img src=\"https://storage.crisp.chat/users/helpdesk/website/29775490664f3600/1_1cnfavm.png\" alt=\"\">\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| username | string | yes | Login, that is used for authorization in Smartup X |\n| password | string | yes | Password, that is used for authorization in Smartup X |",
+		"description": "#### Overview:\n\n---\n\n> This is official \n  \n\nSmartup works with `HTTPS` protocol as well as uses **JSON** and **XML** data formats. All the requests and responses are based on `HTTP` methods.\n\n**Authorization** in the Smartup system takes place according to the **Basic Auth principle**.  \n**Basic** - the simplest scheme, in which the user's login and password are passed in the **Authorization header** in unencrypted form (_base64-encoded_). However, when using the `HTTPS` (HTTP over SSL) protocol, it is relatively secure.\n\n<img src=\"https://storage.crisp.chat/users/helpdesk/website/29775490664f3600/1_1cnfavm.png\">\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| username | string | yes | Login, that is used for authorization in Smartup X |\n| password | string | yes | Password, that is used for authorization in Smartup X |",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -1377,7 +1377,7 @@
 	],
 	"variable": [
 		{
-			"id": "deee74fe-951d-4d9f-bde6-ddafc8ad493c",
+			"id": "9761b3d6-7d9b-4fda-95a6-dde5ae364b9c",
 			"value": "",
 			"type": "string"
 		}
