@@ -28,6 +28,11 @@
 						"value": "text/xml",
 						"type": "text",
 						"disabled": true
+					},
+					{
+						"key": "filial_id",
+						"value": "86401",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -1377,7 +1382,7 @@
 	],
 	"variable": [
 		{
-			"id": "9761b3d6-7d9b-4fda-95a6-dde5ae364b9c",
+			"id": "851d432d-79d4-45da-b11e-2409d56f878e",
 			"value": "",
 			"type": "string"
 		}
