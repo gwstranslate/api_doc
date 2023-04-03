@@ -32,7 +32,8 @@
 					{
 						"key": "filial_id",
 						"value": "86401",
-						"type": "text"
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
@@ -1382,7 +1383,7 @@
 	],
 	"variable": [
 		{
-			"id": "cd6a6fec-c9ce-452d-9d13-6866e383b492",
+			"id": "22a963eb-671c-4f2d-8b4e-3187c8fd172a",
 			"value": "",
 			"type": "string"
 		}
