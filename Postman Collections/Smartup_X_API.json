@@ -1350,6 +1350,156 @@
 				"description": "The service exports data on balance of inventories for a certain period in accordance with the values of the parameters passed to the service in the request. This interface supports bulk sending of data in one request.\n\n**Request**\n\n``` json\n{   \"warehouse_codes\": [\n       {\n           \"warehouse_code\": \"\"\n       }\n   ],\n   \"filial_code\": \"\",\n   \"begin_date\": \"15.02.2023\",\n   \"end_date\": \"15.03.2023\"   \n}\n\n```\n\nResponse\n\n``` json\n{\n  \"balance\": [\n    {\n      \"date\": \"16.02.2023\",\n      \"warehouse_id\": \"61\",\n      \"warehouse_code\": \"001wrh\",\n      \"product_code\": \"002pr\",\n      \"product_id\": \"21\",\n      \"card_code\": null,\n      \"expiry_date\": null,\n      \"serial_number\": null,\n      \"inventory_kind\": \"G\", //G, M, P\n      \"quantity\": \"1400\",\n      \"input_price\": \"14000\",\n      \"measure_code\": null,\n      \"groups\": [\n        {\n          \"group_code\": \"PRDGR:3\",\n          \"type_code\": \"102387\"\n        }\n      ]\n    }\n   ]\n  }\n\n```\n\n**Description of request parameters**\n\n| **Parameter** | **Data type** | **Required** | **Description** |\n| --- | --- | --- | --- |\n| warehouse_codes | array | no | Array with data of warehouses, which balances are related to |\n| warehouse_code | string | no | Warehouse code |\n| filial_code | string | no | Organization unique code |\n| begin_date | date(dd.mm.yyyy hh24:mi:ss) | yes | Filter by inventory balance begin date |\n| end_date | date(dd.mm.yyyy hh24:mi:ss) | yes | Filter by inventory balance end date |\n\n**Description of response parameters**\n\n| **Parameter** | **Data type** | **Description** |\n| --- | --- | --- |\n| balance | array | Array with inventory balance data |\n| date | date(dd.mm.yyyy) | The date of inventory balance. (Date works with one-day principle) |\n| warehouse_id | number | Warehouse ID |\n| warehouse_code | string | Warehouse code |\n| product_code | string | Inventory code |\n| product_id | number | Inventory ID |\n| card_code | string | Card code of inventory. In case there are the same 2 card codes of inventories found, system will count as 1. |\n| expiry_date | date(dd.mm.yyyy) | Expiry date of inventory. In case there are the same 2 expiry dates of inventories found, system will count as 1 |\n| serial_number | string | Serial number |\n| inventory_kind | string | Type of goods and materials ( P - products, G - goods, M - raw materials). Type of goods and materials specifies the category of ownership |\n| quantity | number | Quantity of inventories in balance |\n| input_price | number | Input price |\n| measure_code | string | Measurement code |\n| groups | array | Array with groups of inventory balance |\n| group_code | string | Group code |\n| type_code | string | Type code |\n\n**Note**: All IDs and codes mentioned in response parameters are assigned by Smartup system."
 			},
 			"response": []
+		},
+		{
+			"name": "Cash Operations / Import",
+			"id": "a2088dec-02d2-4d36-9b96-9323c6c2a815",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cash_operation\": [\r\n        {\r\n            \"filial_code\": \"\",\r\n            \"external_id\": \"\",\r\n            \"operation_id\": \"\",\r\n            \"operation_date\": \"\",\r\n            \"operation_number\": \"\",\r\n            \"subfilial_code\": \"\",\r\n            \"posted\": \"\",\r\n            \"cashbox_code\": \"\",\r\n            \"cashflow_reason_code\": \"\",\r\n            \"cashflow_kind\": \"\",\r\n            \"corr_coa_code\": \"\",\r\n            \"corr_person_code\": \"\",\r\n            \"currency_code\": \"\",\r\n            \"amount\": \"\"\r\n            \"responsible_person_code\": \"\"\r\n            \"collector_code\": \"\"\r\n            \"note\": \"\"\r\n            \"ref_codes\": [\r\n                {\r\n                    \"ref_type\": \"\",\r\n                    \"ref_id\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://smartup.online/b/anor/mxsx/mkcs/cash_operation$import",
+				"description": "The service imports cash operations data according to the parameter values passed to the service in the request. This interface supports bulk data ingestion in a single request.\n\n**Request**\n\n``` json\n{\n    \"cash_operation\": [\n        {\n            \"filial_code\": \"\",\n            \"external_id\": \"\",\n            \"operation_id\": \"\",\n            \"operation_date\": \"\",\n            \"operation_number\": \"\",\n            \"subfilial_code\": \"\",\n            \"posted\": \"\",\n            \"cashbox_code\": \"\",\n            \"cashflow_reason_code\": \"\",\n            \"cashflow_kind\": \"\",\n            \"corr_coa_code\": \"\",\n            \"corr_person_code\": \"\",\n            \"currency_code\": \"\",\n            \"amount\": \"\"\n            \"responsible_person_code\": \"\"\n            \"collector_code\": \"\"\n            \"note\": \"\"\n            \"ref_codes\": [\n                {\n                    \"ref_type\": \"\",\n                    \"ref_id\": \"\"\n                }\n            ]\n        }\n    ]\n}\n\n```\n\n**Response**\n\n``` json\n{\n    \"successes\": [\n        {\n            \"code\": \"\"\n        }\n    ],\n    \"errors\": [\n        {\n            \"code\": \"\",\n            \"message\": \"\"\n        }\n    ]\n}\n\n```\n\n**Description of request parameters**\n\n| Parameter | Data Type | Required | Description |\n| --- | --- | --- | --- |\n| cash_operation | array | yes | Array with data of cash operations |\n| filial_code | string | no | Organization unique code |\n| external_id | string | no | Cash operation ID assigned by third party software |\n| operation_id | number | no | Cash operation ID assigned by Smartup |\n| operation_date | date(dd.mm.yyyy) | yes | Cash operation date |\n| operation_number | string | no | Cash operation number |\n| subfilial_code | string | no | Project code |\n| posted | string | yes | Whether cash operation is posted or not (Y - yes, N - no) |\n| cashbox_code | string | yes | Cash register code |\n| cashflow_reason_code | string | yes | Trasaction type code |\n| cashflow_kind | string | yes | Document type |\n| corr_coa_code | string | yes | Account code |\n| corr_person_code | string | no | Counterparty code |\n| currency_code | string | yes | Currency code |\n| amount | number | yes | Amount |\n| responsible_person_code | string | no | Accountable person code |\n| collector_code | string | no | Collector code |\n| note | string | no | Note |\n| ref_codes | array | no | Array with static data of subcounts. All subcounts mentioned in the \"Subcounts\" table. |\n| ref_type | string | no | Subcount |\n| ref_id | string | no | Subcount ID |\n\nBefore sending, the service checks the request for:\n\n- the presence of mandatory parameters\n- parameter validity\n    \n\nIf all checks are passed successfully, the service will return the relevant information for each parameter.\n\n**Description of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |\n\n**Subcounts**\n\n1010 Лицо  \n1011 Договор  \n1012 Тип оплаты  \n1013 Склад  \n1014 Продукт  \n1015 Состояние продукта  \n1016 Партия  \n1017 Серия  \n1018 Дата  \n1019 Касса  \n1020 Расчетный счет  \n1021 Вид движения  \n1022 Статья доходов  \n1023 Статья расходов  \n1024 Автолавка  \n1025 Дополнительный расход  \n1026 Приход  \n1027 Списание  \n1028 Корректировка  \n1029 Заказ  \n1030 Перекидка денежных средств  \n1031 Конвертация валюты  \n1032 Производство  \n1033 Начальные остатки продуктов  \n1034 Subfilial  \n1035 Цена  \n1036 Состояние оплаты начислений  \n1037 Закуп  \n1038 Возврат поставщику  \n1039 Подразделение  \n1040 Должности  \n1041 Серийный номер  \n1042 Поврежденное оборудование  \n1043 Изначальный баланс клиента по оборудованию  \n1044 Конвертация валюты банковских счетах  \n1045 Документы чековой книжки"
+			},
+			"response": []
+		},
+		{
+			"name": "Cash Operations / Export",
+			"id": "3731d216-b52b-4897-bcfb-67fb6b611d7e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filial_codes\": [\r\n    {\r\n      \"filial_code\": \"\"\r\n    }\r\n  ],\r\n  \"filial_code\": \"\",\r\n  \"external_id\": \"\",\r\n  \"operation_id\": \"\",\r\n  \"begin_operation_date\": \"\",\r\n  \"end_operation_date\": \"\",\r\n  \"begin_created_on\": \"\",\r\n  \"end_created_on\": \"\",\r\n  \"begin_modified_on\": \"\",\r\n  \"end_modified_on\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://smartup.online/b/anor/mxsx/mkcs/cash_operation$export",
+				"description": "Through the interface, the service exports data on cash operations for a certain period in accordance with the values of the parameters passed to the service in the request. This interface supports bulk sending of data in one request.\n\n**Request**\n\n``` json\n{\n  \"filial_codes\": [\n    {\n      \"filial_code\": \"\"\n    }\n  ],\n  \"filial_code\": \"\",\n  \"external_id\": \"\",\n  \"operation_id\": \"\",\n  \"begin_operation_date\": \"\",\n  \"end_operation_date\": \"\",\n  \"begin_created_on\": \"\",\n  \"end_created_on\": \"\",\n  \"begin_modified_on\": \"\",\n  \"end_modified_on\": \"\"\n}\n\n```\n\n**Response**\n\n``` json\n{\n    \"cash_operation\": [\n        {\n            \"filial_code\": \"\",\n            \"external_id\": \"\",\n            \"operation_id\": \"\",\n            \"operation_date\": \"\",\n            \"operation_number\": \"\",\n            \"subfilial_code\": \"\",\n            \"posted\": \"\",\n            \"cashbox_code\": \"\",\n            \"cashflow_reason_code\": \"\",\n            \"cashflow_kind\": \"\",\n            \"corr_coa_code\": \"\",\n            \"corr_person_code\": \"\",\n            \"currency_code\": \"\",\n            \"amount\": \"\"\n            \"responsible_person_code\": \"\"\n            \"collector_code\": \"\"\n            \"note\": \"\"\n            \"ref_codes\": [\n                {\n                    \"ref_type\": \"\",\n                    \"ref_id\": \"\"\n                }\n            ]\n        }\n    ]\n}\n\n```\n\n**Description of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| filial_code | string | no | Organization unique code |\n| external_id | string | no | Cash operation ID assigned by third party software |\n| operation_id | number | no | Cash operation ID, in the Smartup system |\n| begin_operation_date | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by cash operation begin date |\n| end_operation_date | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by cash operation end date |\n| begin_created_on | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by creation date |\n| end_created_on | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by last creation date |\n| begin_modified_on | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by date of modification |\n| end_modified_on | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by last modified date |\n\n**Description of response parameters**\n\n| Parameter | Data Type | Description |\n| --- | --- | --- |\n| cash_operation | array | Array with data of cash operations |\n| filial_code | string | Organization unique code |\n| external_id | string | Cash operation ID assigned by third party software |\n| operation_id | number | Cash operation ID assigned by Smartup |\n| operation_date | date(dd.mm.yyyy) | Cash operation date |\n| operation_number | string | Cash operation number |\n| subfilial_code | string | Project code |\n| posted | string | Whether cash operation is posted or not (Y - yes, N - no) |\n| cashbox_code | string | Cash register code |\n| cashflow_reason_code | string | Trasaction type code |\n| cashflow_kind | string | Document type |\n| corr_coa_code | string | Account code |\n| corr_person_code | string | Counterparty code |\n| currency_code | string | Currency code |\n| amount | number | Amount |\n| responsible_person_code | string | Accountable person code |\n| collector_code | string | Collector code |\n| note | string | Note |\n| ref_codes | array | Array with static data of subcounts. All subcounts mentioned in the \"Subcounts\" table. |\n| ref_type | string | Subcount |\n| ref_id | string | Subcount ID |\n\n**Subcounts**\n\n100 - Цена (Значание, например 100000)  \n1011 - Контакт (Код)  \n1012 - Контрагент (Код)  \n103 - Контракт (Код)  \n104 - Продукт (Код)  \n105 - Склад (Код)  \n107 - Касса (Код)  \n108 - Расчетный счет (Код счета)  \n109 - Тип оплаты (Код)  \n110 - Состояние продукции (Значение: 1 - Свободно, 2 - Забронировано, 3 - Просрочено, 4 - В автолавке)  \n111 - Срок годности (Значание, например 19.07.2020)  \n112 - Вид движения (Код)  \n113 - Автолавка (Код)  \n114 - Штат (Код)  \n115 - Департамент (Код)  \n116 - Должность (Код)  \n117 - Тип должности (Код)  \n119 - Тип расчета (Код)  \n123 - Тип удержания / бонуса (Код)  \n124 - Статья расхода / дохода (Код)  \n126 - Операционная касса (Код)  \n127 - Доп. соглашение (Код)  \n201 - Заказ (ИД)  \n203 - Карточка (Значение, например card007)  \n204 - Приход на склад (Ид)  \n205 - Визит проекта MED (ИД)  \n206 - Тип продукта (Код)"
+			},
+			"response": []
+		},
+		{
+			"name": "Bank Statements / Import",
+			"id": "e998b880-5c53-40ab-876b-47baae2fedd9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bank_operation\" : [\r\n        {\r\n            \"filial_code\": \"\",\r\n            \"external_id\": \"\",\r\n            \"operation_id\": \"\",\r\n            \"subfilial_id\": \"\",\r\n            \"posted\": \"\",\r\n            \"operation_date\": \"\",\r\n            \"operation_number\": \"\",\r\n            \"bank_trans_number\": \"\",\r\n            \"bank_trans_date\": \"\",\r\n            \"bank_account_code\": \"\",\r\n            \"cashflow_reason_code\": \"\",\r\n            \"cashflow_kind\": \"\",\r\n            \"corr_coa_code\": \"\",\r\n            \"corr_person_code\": \"\",\r\n            \"corr_bank_account_code\": \"\",\r\n            \"currency_code\": \"\",\r\n            \"amount\": \"\",\r\n            \"payment_code\": \"\",\r\n            \"purpose\": \"\",\r\n            \"responsible_person_code\" : \"\",\r\n            \"note\": \"\",\r\n            \"ref_codes\": [\r\n                {\r\n                    \"ref_type\": \"\",\r\n                    \"ref_id\":\"\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://smartup.online/b/anor/mxsx/mkcs/bank_operation$import",
+				"description": "StartFragment\n\nThe interface allows you to upload bank statements data from third-party software to the Smartup. This interface supports bulk data ingestion in a single request\n\nEndFragment\n\n**Request**\n\n``` json\n{\n    \"bank_operation\" : [\n        {\n            \"filial_code\": \"\",\n            \"external_id\": \"\",\n            \"operation_id\": \"\",\n            \"subfilial_id\": \"\",\n            \"posted\": \"\",\n            \"operation_date\": \"\",\n            \"operation_number\": \"\",\n            \"bank_trans_number\": \"\",\n            \"bank_trans_date\": \"\",\n            \"bank_account_code\": \"\",\n            \"cashflow_reason_code\": \"\",\n            \"cashflow_kind\": \"\",\n            \"corr_coa_code\": \"\",\n            \"corr_person_code\": \"\",\n            \"corr_bank_account_code\": \"\",\n            \"currency_code\": \"\",\n            \"amount\": \"\",\n            \"payment_code\": \"\",\n            \"purpose\": \"\",\n            \"responsible_person_code\" : \"\",\n            \"note\": \"\",\n            \"ref_codes\": [\n                {\n                    \"ref_type\": \"\",\n                    \"ref_id\":\"\"\n                }\n            ]\n        }\n    ]\n}\n\n```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n```\n\n**Description of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| bank_operation | array | yes | Array with data of bank statements |\n| filial_code | string | no | Organization unique code |\n| external_id | string | no | Bank statement ID assigned by third party software |\n| operation_id | number | no | Bank statement ID assigned by Smartup |\n| subfilial_code | string | no | Project code |\n| posted | string | yes | Whether bank statement is posted or not (Y - yes, N - no) |\n| operation_date | date(dd.mm.yyyy) | yes | Bank statement operation date |\n| operation_number | string | no | Bank statement operation number |\n| bank_trans_number | string | no | Transfer No. |\n| bank_trans_date | date(dd.mm.yyyy) | no | Transer Date |\n| bank_account_code | string | yes | Currenct account code |\n| cashflow_reason_code | string | yes | Trasaction type code |\n| cashflow_kind | string | yes | Document type |\n| corr_coa_code | string | yes | Account code |\n| corr_person_code | string | no | Counterparty code |\n| corr_bank_account_code | string | no | Counterparty current account |\n| currency_code | string | yes | Currency code |\n| amount | number | yes | Amount |\n| payment_code | string | no | Payment code |\n| purpose | string | no | Payment details |\n| responsible_person_code | string | no | Accountable person code |\n| note | string | no | Note |\n| ref_codes | array | no | Array with data of subcounts |\n| ref_type | string | no | Subcount |\n| ref_id | string | no | Subcount ID |\n\n**Description of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |\n\n**Subcounts**\n\n100 - Цена (Значание, например 100000)  \n1011 - Контакт (Код)  \n1012 - Контрагент (Код)  \n103 - Контракт (Код)  \n104 - Продукт (Код)  \n105 - Склад (Код)  \n107 - Касса (Код)  \n108 - Расчетный счет (Код счета)  \n109 - Тип оплаты (Код)  \n110 - Состояние продукции (Значение: 1 - Свободно, 2 - Забронировано, 3 - Просрочено, 4 - В автолавке)  \n111 - Срок годности (Значание, например 19.07.2020)  \n112 - Вид движения (Код)  \n113 - Автолавка (Код)  \n114 - Штат (Код)  \n115 - Департамент (Код)  \n116 - Должность (Код)  \n117 - Тип должности (Код)  \n119 - Тип расчета (Код)  \n123 - Тип удержания / бонуса (Код)  \n124 - Статья расхода / дохода (Код)  \n126 - Операционная касса (Код)  \n127 - Доп. соглашение (Код)  \n201 - Заказ (ИД)  \n203 - Карточка (Значение, например card007)  \n204 - Приход на склад (Ид)  \n205 - Визит проекта MED (ИД)  \n206 - Тип продукта (Код)"
+			},
+			"response": []
+		},
+		{
+			"name": "Bank Statements / Export",
+			"id": "fa5da656-e5b0-4339-9177-feed532f9253",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filial_codes\": [\r\n    {\r\n      \"filial_code\": \"\"\r\n    }\r\n  ],\r\n  \"filial_code\": \"\",\r\n  \"external_id\": \"\",\r\n  \"operation_id\": \"\",\r\n  \"begin_operation_date\": \"\",\r\n  \"end_operation_date\": \"\",\r\n  \"begin_created_on\": \"\",\r\n  \"end_created_on\": \"\",\r\n  \"begin_modified_on\": \"\",\r\n  \"end_modified_on\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://smartup.online/b/anor/mxsx/mkcs/bank_operation$export",
+				"description": "Through the interface, the service exports data on bank statements for a certain period in accordance with the values of the parameters passed to the service in the request. This interface supports bulk sending of data in one request.\n\n**Request**\n\n``` json\n{\n  \"filial_codes\": [\n    {\n      \"filial_code\": \"\"\n    }\n  ],\n  \"filial_code\": \"\",\n  \"external_id\": \"\",\n  \"operation_id\": \"\",\n  \"begin_operation_date\": \"\",\n  \"end_operation_date\": \"\",\n  \"begin_created_on\": \"\",\n  \"end_created_on\": \"\",\n  \"begin_modified_on\": \"\",\n  \"end_modified_on\": \"\"\n}\n\n```\n\nResponse\n\n``` json\n{\n    \"bank_operation\" : [\n        {\n            \"filial_code\": \"\",\n            \"external_id\": \"\",\n            \"operation_id\": \"\",\n            \"subfilial_id\": \"\",\n            \"posted\": \"\",\n            \"operation_date\": \"\",\n            \"operation_number\": \"\",\n            \"bank_trans_number\": \"\",\n            \"bank_trans_date\": \"\",\n            \"bank_account_code\": \"\",\n            \"cashflow_reason_code\": \"\",\n            \"cashflow_kind\": \"\",\n            \"corr_coa_code\": \"\",\n            \"corr_person_code\": \"\",\n            \"corr_bank_account_code\": \"\",\n            \"currency_code\": \"\",\n            \"amount\": \"\",\n            \"payment_code\": \"\",\n            \"purpose\": \"\",\n            \"responsible_person_code\" : \"\",\n            \"note\": \"\",\n            \"ref_codes\": [\n                {\n                    \"ref_type\": \"\",\n                    \"ref_id\":\"\"\n                }\n            ]\n        }\n    ]\n}\n\n```\n\n**Description pf request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| filial_code | string | no | Organization unique code |\n| external_id | string | no | Bank statement ID assigned by third party software |\n| operation_id | number | no | Bank statement ID, in the Smartup system |\n| begin_operation_date | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by bank statement begin date |\n| end_operation_date | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by bank statement end date |\n| begin_created_on | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by creation date |\n| end_created_on | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by last creation date |\n| begin_modified_on | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by date of modification |\n| end_modified_on | date(dd.mm.yyyy hh24:mi:ss) | no | Filter by last modified date |\n\n**Description of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| bank_operation | array | Array with data of bank statements |\n| filial_code | string | Organization unique code |\n| external_id | string | Bank statement ID assigned by third party software |\n| operation_id | number | Bank statement ID assigned by Smartup |\n| subfilial_code | string | Project code |\n| posted | string | Whether bank statement is posted or not (Y - yes, N - no) |\n| operation_date | date(dd.mm.yyyy) | Bank statement operation date |\n| operation_number | string | Bank statement operation number |\n| bank_trans_number | string | Transfer No. |\n| bank_trans_date | date(dd.mm.yyyy) | Transer Date |\n| bank_account_code | string | Currenct account code |\n| cashflow_reason_code | string | Trasaction type code |\n| cashflow_kind | string | Document type |\n| corr_coa_code | string | Account code |\n| corr_person_code | string | Counterparty code |\n| corr_bank_account_code | string | Counterparty current account |\n| currency_code | string | Currency code |\n| amount | number | Amount |\n| payment_code | string | Payment code |\n| purpose | string | Payment details |\n| responsible_person_code | string | Accountable person code |\n| note | string | Note |\n| ref_codes | array | Array with data of subcounts |\n| ref_type | string | Subcount |\n| ref_id | string | Subcount ID |\n\n**Subcounts**\n\n100 - Цена (Значание, например 100000)  \n1011 - Контакт (Код)  \n1012 - Контрагент (Код)  \n103 - Контракт (Код)  \n104 - Продукт (Код)  \n105 - Склад (Код)  \n107 - Касса (Код)  \n108 - Расчетный счет (Код счета)  \n109 - Тип оплаты (Код)  \n110 - Состояние продукции (Значение: 1 - Свободно, 2 - Забронировано, 3 - Просрочено, 4 - В автолавке)  \n111 - Срок годности (Значание, например 19.07.2020)  \n112 - Вид движения (Код)  \n113 - Автолавка (Код)  \n114 - Штат (Код)  \n115 - Департамент (Код)  \n116 - Должность (Код)  \n117 - Тип должности (Код)  \n119 - Тип расчета (Код)  \n123 - Тип удержания / бонуса (Код)  \n124 - Статья расхода / дохода (Код)  \n126 - Операционная касса (Код)  \n127 - Доп. соглашение (Код)  \n201 - Заказ (ИД)  \n203 - Карточка (Значение, например card007)  \n204 - Приход на склад (Ид)  \n205 - Визит проекта MED (ИД)  \n206 - Тип продукта (Код)"
+			},
+			"response": []
+		},
+		{
+			"name": "Order Status Change",
+			"id": "785a731d-2ab8-402c-ae52-b42143c94f4c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"order\": [\r\n      {\r\n      \"deal_id\": \"642\",\r\n      \"status\": \"A\"\r\n      }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://smartup.online/b/trade/txs/tdeal/order$change_status",
+				"description": "This interface allows you to change the status of orders.\n\n**Request**\n\n``` json\n{\n  \"order\": [\n      {\n      \"deal_id\": \"642\",\n      \"status\": \"A\"\n      }\n  ]\n}\n\n```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n```\n\n**Discription of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| order | array | yes | Array with order data that is used to change status afterwards |\n| deal_id | number | yes | Order ID |\n| status | string | yes | Order status (Y - yes, N - no) |\n\n**Description of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |"
+			},
+			"response": []
 		}
 	],
 	"auth": {
@@ -1383,7 +1533,7 @@
 	],
 	"variable": [
 		{
-			"id": "fb4bd400-6fc8-4af3-851f-02a00b07c743",
+			"id": "f77fcc8c-4627-4dc0-8e04-d1698d527762",
 			"value": "",
 			"type": "string"
 		}
