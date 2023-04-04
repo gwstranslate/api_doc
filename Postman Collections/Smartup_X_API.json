@@ -1069,7 +1069,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"purchase\": [\r\n    {\r\n        \"filial_code\": \"\",\r\n        \"external_id\": \"\",\r\n        \"purchase_id\": \"\",\r\n        \"purchase_number\": \"\",\r\n        \"purchase_time\": \"\",\r\n        \"order_id\": \"\",\r\n        \"status_code\": \"\",\r\n        \"input_date\": \"\",\r\n        \"supplier_code\": \"\",\r\n        \"contract_code\": \"\",\r\n        \"warehouse_code\": \"\",\r\n        \"currency_code\": \"\",\r\n        \"invoice_number\": \"\",\r\n        \"invoice_date\": \"\",\r\n        \"total_margin_kind\": \"\",\r\n        \"total_margin_value\": \"\",\r\n        \"note\": \"\",\r\n        \"posted\": \"\",\r\n        \"purchase_items\": [\r\n          {\r\n            \"external_id\": \"\",\r\n            \"purchase_item_id\": \"\",\r\n            \"product_code\": \"\",\r\n            \"order_item_id\": \"\",\r\n            \"on_balance\": \"\",\r\n            \"serial_number\": \"\",\r\n            \"inventory_kind\": \"\",\r\n            \"card_code\": \"\",\r\n            \"expiry_date\": \"\",\r\n            \"quantity\": \"\",\r\n            \"price\": \"\",\r\n            \"margin_kind\": \"\",\r\n            \"margin_value\": \"\",\r\n            \"vat_percent\": \"\",\r\n            \"vat_amount\": \"\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}\r\n",
+					"raw": "{\r\n  \"purchase\": [\r\n    {\r\n        \"filial_code\": \"\",\r\n        \"external_id\": \"\",\r\n        \"purchase_id\": \"\",\r\n        \"purchase_number\": \"\",\r\n        \"purchase_time\": \"\",\r\n        \"order_id\": \"\",\r\n        \"status_code\": \"\",\r\n        \"input_date\": \"\",\r\n        \"supplier_code\": \"\",\r\n        \"contract_code\": \"\",\r\n        \"warehouse_code\": \"\",\r\n        \"currency_code\": \"\",\r\n        \"invoice_number\": \"\",\r\n        \"invoice_date\": \"\",\r\n        \"total_margin_kind\": \"\",\r\n        \"total_margin_value\": \"\",\r\n        \"note\": \"\",\r\n        \"posted\": \"\",\r\n        \"purchase_items\": [\r\n          {\r\n            \"external_id\": \"\",\r\n            \"purchase_item_id\": \"\",\r\n            \"product_code\": \"\",\r\n            \"order_item_id\": \"\",\r\n            \"on_balance\": \"\",\r\n            \"serial_number\": \"\",\r\n            \"inventory_kind\": \"\",\r\n            \"card_code\": \"\",\r\n            \"expiry_date\": \"\",\r\n            \"quantity\": \"\",\r\n            \"price\": \"\",\r\n            \"margin_kind\": \"\",\r\n            \"margin_value\": \"\",\r\n            \"vat_percent\": \"\",\r\n            \"vat_amount\": \"\"\r\n          }\r\n        ]\r\n      }\r\n  ]\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1533,7 +1533,7 @@
 	],
 	"variable": [
 		{
-			"id": "7b714291-7481-4d60-b34b-b7b30c8d50fa",
+			"id": "6525fe65-81a2-410d-8018-61c4bb269cc8",
 			"value": "",
 			"type": "string"
 		}
