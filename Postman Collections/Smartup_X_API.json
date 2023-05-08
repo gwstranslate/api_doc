@@ -409,7 +409,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"rooms\": [\r\n        {\r\n          \"room_code\": \"\"\r\n        }\r\n      ],\r\n    \"code\": \"\",\r\n    \"begin_created_on\": \"\",\r\n    \"end_created_on\": \"\",\r\n    \"begin_modified_on\": \"\",\r\n    \"end_modified_on\": \"\"\r\n}",
+					"raw": "{\r\n    \"rooms\": [\r\n        {\r\n          \"room_code\": \"\"\r\n        }\r\n      ],\r\n    \"code\": \"\",\r\n    \"state\": \"\",\r\n    \"begin_created_on\": \"\",\r\n    \"end_created_on\": \"\",\r\n    \"begin_modified_on\": \"\",\r\n    \"end_modified_on\": \"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1533,7 +1533,7 @@
 	],
 	"variable": [
 		{
-			"id": "04d3e862-4327-4fc5-b341-e8163d1201d9",
+			"id": "674b9516-19aa-4b51-ab95-0cfc7cb5dcb9",
 			"value": "",
 			"type": "string"
 		}
