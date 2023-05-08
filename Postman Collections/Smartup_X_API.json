@@ -1500,6 +1500,96 @@
 				"description": "This interface allows you to change the status of orders.\n\n**Request**\n\n``` json\n{\n  \"order\": [\n      {\n      \"deal_id\": \"642\",\n      \"status\": \"A\"\n      }\n  ]\n}\n\n```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n```\n\n**Discription of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| order | array | yes | Array with order data that is used to change status afterwards |\n| deal_id | number | yes | Order ID |\n| status | string | yes | Order status (Y - yes, N - no) |\n\n**Description of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |"
 			},
 			"response": []
+		},
+		{
+			"name": "Cross-organizational Movement Status Change",
+			"id": "a55638e6-f6ce-4c8f-b7cc-0e842791ef56",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"movement\": [\r\n      {\r\n      \"movement_id\" : \"\",\r\n      \"status\": \"\"\r\n      }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://smartup.online/b/anor/mxsx/mfm/movement$change_status",
+				"description": "This interface allows you to change the status of cross-organizational movements.\n\n**Request**\n\n``` json\n{\n  \"movement\": [\n      {\n      \"movement_id\" : \"\",\n      \"status\": \"\"\n      }\n  ]\n}\n\n```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n```\n\n**Description of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| movement | array | yes | Array with movement data that is used to change status afterwards |\n| movement_id | number | yes | Movement ID |\n| status | string | yes | Movement status (  <br>D - Draft  <br>N - New  <br>W - Waiting  <br>S - Sent  <br>A - Approved  <br>R - Returned  <br>C - Completed  <br>L - Cancelled) |\n\n**Desctiption of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |"
+			},
+			"response": []
+		},
+		{
+			"name": "Cross-organizational Movement / Import",
+			"id": "58ecd622-1742-41cf-b09d-777d019136a7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movement\": [\r\n        {\r\n            \"from_filial_code\": \"\",\r\n            \"external_id\": \"\",\r\n            \"movement_id\": \"\",\r\n            \"subfilial_code\": \"\",\r\n            \"from_room_code\": \"\",\r\n            \"from_robot_code\": \"\",\r\n            \"from_robot_person_code\": \"\",\r\n            \"from_warehouse_code\": \"\",\r\n            \"from_time\": \"\",\r\n            \"to_filial_code\": \"\",\r\n            \"to_warehouse_code\": \"\",\r\n            \"to_time\": \"\",\r\n            \"currency_code\": \"\",\r\n            \"price_type_code\": \"\",\r\n            \"payment_type_code\": \"\",\r\n            \"request_id\": \"\",\r\n            \"reason_id\": \"\",\r\n            \"note\": \"\",\r\n            \"barcode\": \"\",\r\n            \"amount\": \"\",\r\n            \"amount_base\": \"\",\r\n            \"delivery_number\": \"\",\r\n            \"contract_code\": \"\",\r\n            \"status\": \"\",\r\n            \"movement_items\": [\r\n                {\r\n                    \"external_id\": \"\",\r\n                    \"movement_unit_id\": \"\",\r\n                    \"request_item_id\": \"\",\r\n                    \"from_inventory_kind\": \"\",\r\n                    \"on_balance\": \"\",\r\n                    \"to_inventory_kind\": \"\",\r\n                    \"product_code\": \"\",\r\n                    \"card_code\": \"\",\r\n                    \"expiry_date\": \"\",\r\n                    \"serial_number\": \"\",\r\n                    \"quantity\": \"\",\r\n                    \"price\": \"\",\r\n                    \"amount\": \"\",\r\n                    \"amount_base\": \"\",\r\n                    \"margin_kind\": \"\",\r\n                    \"margin_value\": \"\",\r\n                    \"margin_amount\": \"\",\r\n                    \"vat_percent\": \"\",\r\n                    \"vat_amount\": \"\",\r\n                    \"load_id\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://smartup.online/b/anor/mxsx/mfm/movement$export",
+				"description": "This interface uploads cross-organization movements data to the Smartup X from third party software. The interface supports bulk data ingestion in a single request.\n\n**Request**\n\n``` json\n{\n    \"movement\": [\n        {\n            \"from_filial_code\": \"\",\n            \"external_id\": \"\",\n            \"movement_id\": \"\",\n            \"subfilial_code\": \"\",\n            \"from_room_code\": \"\",\n            \"from_robot_code\": \"\",\n            \"from_robot_person_code\": \"\",\n            \"from_warehouse_code\": \"\",\n            \"from_time\": \"\",\n            \"to_filial_code\": \"\",\n            \"to_warehouse_code\": \"\",\n            \"to_time\": \"\",\n            \"currency_code\": \"\",\n            \"price_type_code\": \"\",\n            \"payment_type_code\": \"\",\n            \"request_id\": \"\",\n            \"reason_id\": \"\",\n            \"note\": \"\",\n            \"barcode\": \"\",\n            \"amount\": \"\",\n            \"amount_base\": \"\",\n            \"delivery_number\": \"\",\n            \"contract_code\": \"\",\n            \"status\": \"\",\n            \"movement_items\": [\n                {\n                    \"external_id\": \"\",\n                    \"movement_unit_id\": \"\",\n                    \"request_item_id\": \"\",\n                    \"from_inventory_kind\": \"\",\n                    \"on_balance\": \"\",\n                    \"to_inventory_kind\": \"\",\n                    \"product_code\": \"\",\n                    \"card_code\": \"\",\n                    \"expiry_date\": \"\",\n                    \"serial_number\": \"\",\n                    \"quantity\": \"\",\n                    \"price\": \"\",\n                    \"amount\": \"\",\n                    \"amount_base\": \"\",\n                    \"margin_kind\": \"\",\n                    \"margin_value\": \"\",\n                    \"margin_amount\": \"\",\n                    \"vat_percent\": \"\",\n                    \"vat_amount\": \"\",\n                    \"load_id\": \"\"\n                }\n            ]\n        }\n    ]\n}\n\n```\n\n**Response**\n\n``` json\n    \"successes\": [\n        {\n            \"code\": \"\"\n        }\n    ],\n    \"errors\": [\n        {\n            \"code\": \"\",\n            \"message\": \"\"\n        }\n    ]\n}\n\n```\n\n**Description of request parameters**\n\n| Parameter | Data type | **Required** | Description |\n| --- | --- | --- | --- |\n| movement | array | yes | Array with data on the interorganizational movement (information about the move itself) |\n| filial_code | string | no | Organization code of searching movement |\n| from_filial_code | string | yes | Organization of movement (sender) |\n| external_id | string | no | Movement ID assigned by third party software |\n| movement_id | number | no | Movement ID assigned by Smartup |\n| subfilial_code | string | no | Project code |\n| from_room_code | string | yes | Workspace code (sender) |\n| from_robot_code | string | yes | Staff Unit code (sender) |\n| from_robot_person_code | string | yes | User code (sender) |\n| from_warehouse_code | string | yes | Warehouse code (sender) |\n| from_time | date(dd.mm.yyyy hh24:mi:ss) | yes | Time of sending movement |\n| to_filial_code | string | yes | Organization code (recipient) |\n| to_warehouse_code | string | no | Warehouse code (recipient) |\n| to_time | date(dd.mm.yyyy hh24:mi:ss) | no | Time of receiving movement to another organization |\n| currency_code | string | yes | Currency code |\n| price_type_code | string | yes | Price type code |\n| payment_type_code | string | no | Payment type code |\n| request_id | number | no | Request ID |\n| reason_id | number | no | Reason ID |\n| note | string | no | Note |\n| amount | number | no | Amount of sending inventories |\n| delivery_number | string | no | Delivery No. |\n| contract_code | string | no | Contract code |\n| status | string | no | Status of the inventories  <br>D - Draft  <br>N - New  <br>W - Waiting  <br>S - Sent  <br>A - Approved  <br>R - Returned  <br>C - Completed  <br>L - Cancelled |\n| movement_items | array | yes | Array with data of movement items |\n| external_id | number | no | Movement ID assigned by third party software |\n| movement_unit_id | number | no | ID of movement inventory |\n| request_item_id | number | no | ID of movement inventory in request |\n| from_inventory_kind | string | yes | Inventory type (sender) |\n| on_balance | string | no | The term that determines whether the balance sheet is Off or On. The parameter takes two statuses. (Y - yes, N - no) |\n| to_inventory_kind | string | no | Inventory type (recipient) |\n| product_code | string | yes | Inventory code |\n| card_code | string | no | Card code |\n| expiry_date | date(dd.mm.yyyy) | no | Inventory expiry date |\n| serial_number | string | no | Serial number of inventory |\n| quantity | number | yes | Inventory Qty |\n| price | number | yes | Inventory price |\n| margin_kind | string | yes | Margin type (markup or discount) |\n| margin_value | number | yes | Margin value |\n| vat_percent | number | yes | VAT % |\n| vat_amount | number | no | VAT amount |\n| load_id | number | no | Tie-in ID |\n\n**sender** - the term, which determines sender of any entity. For instance, Organization (sender) means that movement is going to be sent from that Organization.\n\n**recipient** - the term, which determines recipient of any entity. For instance, Warehouse (recipient) means that movement is going to be sent to this warehouse.\n\n**Description of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique code records |\n| message | string | Clarifying error messages from the server |"
+			},
+			"response": []
+		},
+		{
+			"name": "Cross-organizational Movement / Export",
+			"id": "dd8a5e55-a4a7-4533-ac78-38618b0f99dd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filial_codes\": [\r\n    {\r\n      \"filial_code\": \"\"\r\n    }\r\n  ],\r\n  \"filial_code\": \"\",\r\n  \"external_id\": \"\",\r\n  \"movement_id\": \"\",\r\n  \"begin_created_on\": \"\",\r\n  \"end_created_on\": \"\",\r\n  \"begin_modified_on\": \"\",\r\n  \"end_modified_on\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://smartup.online/b/anor/mxsx/mfm/movement$export",
+				"description": "The service exports data on cross-organizational movements for a certain period in accordance with the values of the parameters passed to the service in the request. This interface supports bulk sending of data in one request.\n\n**Request**\n\n``` json\n{\n  \"filial_codes\": [\n    {\n      \"filial_code\": \"\"\n    }\n  ],\n  \"filial_code\": \"\",\n  \"external_id\": \"\",\n  \"movement_id\": \"\",\n  \"begin_created_on\": \"\",\n  \"end_created_on\": \"\",\n  \"begin_modified_on\": \"\",\n  \"end_modified_on\": \"\"\n}\n\n```\n\n**Response**\n\n``` json\n{\n    \"movement\": [\n        {\n            \"from_filial_code\": \"\",\n            \"external_id\": \"\",\n            \"movement_id\": \"\",\n            \"subfilial_code\": \"\",\n            \"from_room_code\": \"\",\n            \"from_robot_code\": \"\",\n            \"from_robot_person_code\": \"\",\n            \"from_warehouse_code\": \"\",\n            \"from_time\": \"\",\n            \"to_filial_code\": \"\",\n            \"to_warehouse_code\": \"\",\n            \"to_time\": \"\",\n            \"currency_code\": \"\",\n            \"price_type_code\": \"\",\n            \"payment_type_code\": \"\",\n            \"request_id\": \"\",\n            \"reason_id\": \"\",\n            \"note\": \"\",\n            \"barcode\": \"\",\n            \"amount\": \"\",\n            \"amount_base\": \"\",\n            \"delivery_number\": \"\",\n            \"contract_code\": \"\",\n            \"status\": \"\",\n            \"movement_items\": [\n                {\n                    \"external_id\": \"\",\n                    \"movement_unit_id\": \"\",\n                    \"request_item_id\": \"\",\n                    \"from_inventory_kind\": \"\",\n                    \"on_balance\": \"\",\n                    \"to_inventory_kind\": \"\",\n                    \"product_code\": \"\",\n                    \"card_code\": \"\",\n                    \"expiry_date\": \"\",\n                    \"serial_number\": \"\",\n                    \"quantity\": \"\",\n                    \"price\": \"\",\n                    \"amount\": \"\",\n                    \"amount_base\": \"\",\n                    \"margin_kind\": \"\",\n                    \"margin_value\": \"\",\n                    \"margin_amount\": \"\",\n                    \"vat_percent\": \"\",\n                    \"vat_amount\": \"\",\n                    \"load_id\": \"\"\n                }\n            ]\n        }\n    ]\n}\n\n```\n\nDescription of request parameters\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| filial_codes | array | Array with data of organizations involved in the movement \\* |\n| filial_code | string | Organization unique code |\n| external_id | string | Movement ID assigned by third party software |\n| movement_id | number | Movement ID assigned by Smartup |\n| begin_created_on | date(dd.mm.yyyy hh24:mi:ss) | Filter by creation date |\n| end_created_on | date(dd.mm.yyyy hh24:mi:ss) | Filter by last creation date |\n| begin_modified_on | date(dd.mm.yyyy hh24:mi:ss) | Filter by date of modification |\n| end_modified_on | date dd.mm.yyyy hh24:mi:ss) | Filter by last modified date |\n\n**Description of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| movement | array | Array with data on the interorganizational movement (information about the move itself) |\n| from_filial_code | string | Organization of movement (sender) |\n| external_id | string | Movement ID assigned by third party software |\n| movement_id | number | Movement ID assigned by Smartup |\n| subfilial_code | string | Project code |\n| from_room_code | string | Workspace code (sender) |\n| from_robot_code | string | Staff Unit code (sender) |\n| from_robot_person_code | string | User code (sender) |\n| from_warehouse_code | string | Warehouse code (sender) |\n| from_time | date(dd.mm.yyyy hh24:mi:ss) | Time of sending movement |\n| to_filial_code | string | Organization code (recipient) |\n| to_warehouse_code | string | Warehouse code (recipient) |\n| to_time | date(dd.mm.yyyy hh24:mi:ss) | Time of receiving movement to another organization |\n| currency_code | string | Currency code |\n| price_type_code | string | Price type code |\n| payment_type_code | string | Payment type code |\n| request_id | number | Request ID |\n| reason_id | number | Reason ID |\n| note | string | Note |\n| barcode | string | Barcode |\n| amount | number | Amount of sending inventories |\n| amount_base | number | Base Amount |\n| delivery_number | string | Delivery No. |\n| contract_code | string | Contract code |\n| status | string | Status of the inventories  <br>D - Draft  <br>N - New  <br>W - Waiting  <br>S - Sent  <br>A - Approved  <br>R - Returned  <br>C - Completed  <br>L - Cancelled |\n| movement_items | array | Array with data of movement items |\n| external_id | number | Movement ID assigned by third party software |\n| movement_unit_id | number | ID of movement inventory |\n| request_item_id | number | ID of movement inventory in request |\n| from_inventory_kind | string | Inventory type (sender) |\n| on_balance | string | The term that determines whether the balance sheet is Off or On. The parameter takes two statuses. (Y - yes, N - no) |\n| to_inventory_kind | string | Inventory type (recipient) |\n| product_code | string | Inventory code |\n| card_code | string | Card code |\n| expiry_date | date(dd.mm.yyyy) | Inventory expiry date |\n| serial_number | string | Serial number of inventory |\n| quantity | number | Inventory Qty |\n| price | number | Inventory price |\n| amount | number | Inventory amount |\n| amount_base | number | Inventory base amount |\n| margin_kind | string | Margin type (markup or discount) |\n| margin_value | number | Margin value |\n| margin_amount | number | Margin amount |\n| vat_percent | number | VAT % |\n| vat_amount | number | VAT amount |\n| load_id | number | Tie-in ID |\n\n**sender** - the term, which determines sender of any entity. For instance, Organization (sender) means that movement is going to be sent from that Organization.\n\n**recipient** - the term, which determines recipient of any entity. For instance, Warehouse (recipient) means that movement is going to be sent to this warehouse."
+			},
+			"response": []
 		}
 	],
 	"auth": {
@@ -1533,7 +1623,7 @@
 	],
 	"variable": [
 		{
-			"id": "a08f50bf-a496-4d2a-b9d9-1fdc20db09d2",
+			"id": "ca4956a0-e631-4d06-8a46-6343e046ec36",
 			"value": "",
 			"type": "string"
 		}
