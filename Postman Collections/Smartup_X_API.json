@@ -38,7 +38,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"inventory\": [\r\n        {\r\n            \"code\": \"100\",\r\n            \"name\": \"Coca-cola 0.5l\",\r\n            \"short_name\": \"Coca-cola 0.5l\",\r\n            \"weight_netto\": \"0.5\",\r\n            \"weight_brutto\": \"0.65\",\r\n            \"litr\": \"0.5\",\r\n            \"box_type_code\": \"block\",\r\n            \"box_quant\": \"12\",\r\n            \"producer_code\": \"\",\r\n            \"measure_code\": \"kilogram2\",\r\n            \"state\": \"A\",\r\n            \"barcodes\": \"\",\r\n            \"order_no\": \"\",\r\n            \"article_code\": \"100\",\r\n            \"groups\": [\r\n                {\r\n                    \"group_code\": \"Drinks\",\r\n                    \"type_code\": \"A\"\r\n                }\r\n            ],\r\n            \"inventory_kinds\": [\r\n                {\r\n                    \"inventory_kind\": \"P\"\r\n                }\r\n            ],\r\n            \"sector_codes\": [\r\n                {\r\n                    \"sector_code\": \"654321\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n",
+					"raw": "{\r\n    \"inventory\": [\r\n        {\r\n            \"code\": \"100\",\r\n            \"name\": \"Coca-cola 0.5l\",\r\n            \"short_name\": \"Coca-cola 0.5l\",\r\n            \"weight_netto\": \"0.5\",\r\n            \"weight_brutto\": \"0.65\",\r\n            \"litr\": \"0.5\",\r\n            \"box_type_code\": \"block\",\r\n            \"box_quant\": \"12\",\r\n            \"producer_code\": \"\",\r\n            \"measure_code\": \"kilogram2\",\r\n            \"state\": \"A\",\r\n            \"barcodes\": \"\",\r\n            \"order_no\": \"\",\r\n            \"article_code\": \"100\",\r\n            \"gtin\": \"\",\r\n            \"ikpu\": \"\",\r\n            \"tnved\": \"\",\r\n            \"groups\": [\r\n                {\r\n                    \"group_code\": \"Drinks\",\r\n                    \"type_code\": \"A\"\r\n                }\r\n            ],\r\n            \"inventory_kinds\": [\r\n                {\r\n                    \"inventory_kind\": \"P\"\r\n                }\r\n            ],\r\n            \"sector_codes\": [\r\n                {\r\n                    \"sector_code\": \"654321\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1623,7 +1623,7 @@
 	],
 	"variable": [
 		{
-			"id": "43240c71-6347-41f4-9d29-f7ad952f1002",
+			"id": "54ceece8-f3aa-4386-93ae-9247650b69c2",
 			"value": "",
 			"type": "string"
 		}
