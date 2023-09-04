@@ -1519,7 +1519,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"deal_id\": \"18927\",\r\n    \"products\": [\r\n        {\r\n            \"product_unit_id\": \"\",\r\n            \"marking_codes\": [\"\"]\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"deal_id\": \"\",\r\n    \"products\": [\r\n        {\r\n            \"product_unit_id\": \"\",\r\n            \"marking_codes\": [\"\"]\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1652,7 +1652,7 @@
 	],
 	"variable": [
 		{
-			"id": "d8cd73ac-1b16-443c-9f0a-ed3935d02851",
+			"id": "6c0a6cc7-a606-4a88-a0bb-f9244ddc2da0",
 			"value": "",
 			"type": "string"
 		}
