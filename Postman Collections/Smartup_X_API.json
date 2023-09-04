@@ -962,7 +962,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Order attach marking codes",
 			"id": "97a98391-3d33-4f5b-ac01-269a5cf06874",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -1636,7 +1636,7 @@
 	],
 	"variable": [
 		{
-			"id": "c7278e62-5bc2-45f0-81a3-7c44e6cd3484",
+			"id": "1c4907f1-b608-4ba1-ae81-e42a845aa941",
 			"value": "",
 			"type": "string"
 		}
