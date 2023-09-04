@@ -962,19 +962,6 @@
 			"response": []
 		},
 		{
-			"name": "Order attach marking codes",
-			"id": "97a98391-3d33-4f5b-ac01-269a5cf06874",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": "https://smartup.online/b/anor/mxsx/mdeal/order$import_order_marking_codes"
-			},
-			"response": []
-		},
-		{
 			"name": "Order / Export",
 			"id": "da6c0247-7a4f-4c3d-a243-5c6d407568bb",
 			"protocolProfileBehavior": {
@@ -1515,6 +1502,19 @@
 			"response": []
 		},
 		{
+			"name": "Order Attach Marking Codes",
+			"id": "97a98391-3d33-4f5b-ac01-269a5cf06874",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "https://smartup.online/b/anor/mxsx/mdeal/order$import_order_marking_codes"
+			},
+			"response": []
+		},
+		{
 			"name": "Cross-organizational Movement Status Change",
 			"id": "a55638e6-f6ce-4c8f-b7cc-0e842791ef56",
 			"protocolProfileBehavior": {
@@ -1636,7 +1636,7 @@
 	],
 	"variable": [
 		{
-			"id": "1c4907f1-b608-4ba1-ae81-e42a845aa941",
+			"id": "65b188c6-17bc-46f1-8961-301ad9330a45",
 			"value": "",
 			"type": "string"
 		}
