@@ -1526,7 +1526,8 @@
 						}
 					}
 				},
-				"url": "https://smartup.online/b/anor/mxsx/mdeal/order$import_order_marking_codes"
+				"url": "https://smartup.online/b/anor/mxsx/mdeal/order$import_order_marking_codes",
+				"description": "This interface allows you to attach marking codes for order.\n\n**Request**\n\n``` json\n{\n    \"deal_id\": \"\",\n    \"products\": [\n        {\n            \"product_unit_id\": \"\",\n            \"marking_codes\": [\"\"]\n        }\n    ]\n}\n\n ```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n ```\n\n**Description of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| deal_id | number | yes | Order ID in the Smartup system |\n| products | array | yes | Array with data about of goods and materials in the order |\n| product_unit_id | string | yes | Movement status (  <br>D - Draft  <br>N - New  <br>W - Waiting  <br>S - Sent  <br>A - Approved  <br>R - Returned  <br>C - Completed  <br>L - Cancelled) |\n\n**Desctiption of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |"
 			},
 			"response": []
 		},
@@ -1652,7 +1653,7 @@
 	],
 	"variable": [
 		{
-			"id": "6b89960d-add4-4cbe-8fdc-e8fe540e7b4a",
+			"id": "defaf94b-3c88-4535-9cf4-3b3f4d47e3fe",
 			"value": "",
 			"type": "string"
 		}
