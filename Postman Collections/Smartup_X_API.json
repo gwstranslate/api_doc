@@ -1508,6 +1508,13 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "greenwhite",
+						"username": "admin@test"
+					}
+				},
 				"method": "POST",
 				"header": [],
 				"url": "https://smartup.online/b/anor/mxsx/mdeal/order$import_order_marking_codes"
@@ -1636,7 +1643,7 @@
 	],
 	"variable": [
 		{
-			"id": "65b188c6-17bc-46f1-8961-301ad9330a45",
+			"id": "1745b7f4-cedb-4f0e-a708-2f7eb81e6449",
 			"value": "",
 			"type": "string"
 		}
