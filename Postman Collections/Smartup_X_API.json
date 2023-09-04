@@ -1556,7 +1556,7 @@
 					}
 				},
 				"url": "https://smartup.online/b/anor/mxsx/mfm/movement$change_status",
-				"description": "This interface allows you to change the status of cross-organizational movements.\n\n**Request**\n\n``` json\n{\n  \"movement\": [\n      {\n      \"movement_id\" : \"\",\n      \"status\": \"\"\n      }\n  ]\n}\n\n```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n```\n\n**Description of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| movement | array | yes | Array with movement data that is used to change status afterwards |\n| movement_id | number | yes | Movement ID |\n| status | string | yes | Movement status (  <br>D - Draft  <br>N - New  <br>W - Waiting  <br>S - Sent  <br>A - Approved  <br>R - Returned  <br>C - Completed  <br>L - Cancelled) |\n\n**Desctiption of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |"
+				"description": "This interface allows you to change the status of cross-organizational movements.\n\n**Request**\n\n``` json\n{\n  \"movement\": [\n      {\n      \"movement_id\" : \"\",\n      \"status\": \"\"\n      }\n  ]\n}\n\n ```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n ```\n\n**Description of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| movement | array | yes | Array with movement data that is used to change status afterwards |\n| movement_id | number | yes | Movement ID |\n| status | string | yes | Movement status (  <br>D - Draft  <br>N - New  <br>W - Waiting  <br>S - Sent  <br>A - Approved  <br>R - Returned  <br>C - Completed  <br>L - Cancelled) |\n\n**Desctiption of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |"
 			},
 			"response": []
 		},
@@ -1652,7 +1652,7 @@
 	],
 	"variable": [
 		{
-			"id": "8e756276-7ea8-4e30-bf0a-e5312e17038f",
+			"id": "6b89960d-add4-4cbe-8fdc-e8fe540e7b4a",
 			"value": "",
 			"type": "string"
 		}
