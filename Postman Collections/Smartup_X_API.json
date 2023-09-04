@@ -1527,7 +1527,7 @@
 					}
 				},
 				"url": "https://smartup.online/b/anor/mxsx/mdeal/order$import_order_marking_codes",
-				"description": "This interface allows you to attach marking codes for order.\n\n**Request**\n\n``` json\n{\n    \"deal_id\": \"\",\n    \"products\": [\n        {\n            \"product_unit_id\": \"\",\n            \"marking_codes\": [\"\"]\n        }\n    ]\n}\n\n ```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n ```\n\n**Description of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| deal_id | number | yes | Order ID in the Smartup system |\n| products | array | yes | Array with data about of goods and materials in the order |\n| product_unit_id | number | yes | Order Item ID |\n| marking_codes | string | yes | Array with data of attaching marking codes for product unit |\n\n**Desctiption of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |"
+				"description": "This interface allows you to attach marking codes for order.\n\n**Request**\n\n``` json\n{\n    \"deal_id\": \"\",\n    \"products\": [\n        {\n            \"product_unit_id\": \"\",\n            \"marking_codes\": [\"\"]\n        }\n    ]\n}\n\n ```\n\n**Response**\n\n``` json\n{\n  \"successes\": [\n    {\n      \"code\": \"\"\n    }\n  ],\n  \"errors\": [\n  ]\n}\n\n ```\n\n**Description of request parameters**\n\n| Parameter | Data type | Required | Description |\n| --- | --- | --- | --- |\n| deal_id | number | yes | Order ID in the Smartup system |\n| products | array | yes | Array with data about of goods and materials in the order |\n| product_unit_id | number | yes | Order Item ID |\n| marking_codes | array | yes | Array with data of attaching marking codes for product unit |\n\n**Desctiption of response parameters**\n\n| Parameter | Data type | Description |\n| --- | --- | --- |\n| successes | array | Array of successfully processed data |\n| errors | array | Array data with errors |\n| code | string | Unique record code |\n| message | string | Clarifying error messages from the server |"
 			},
 			"response": []
 		},
@@ -1653,7 +1653,7 @@
 	],
 	"variable": [
 		{
-			"id": "c78d37cc-2153-40e8-983c-c32d870ee43e",
+			"id": "c7f061f8-a059-4b37-843b-f7a2b0785d8f",
 			"value": "",
 			"type": "string"
 		}
