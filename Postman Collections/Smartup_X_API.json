@@ -1246,7 +1246,18 @@
 					}
 				},
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "project_code",
+						"value": "trade",
+						"type": "text"
+					},
+					{
+						"key": "filial_id",
+						"value": "97675",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n  \"filial_codes\": [\r\n    {\r\n      \"filial_code\": \"\"\r\n    }\r\n  ],\r\n  \"filial_code\": \"\",\r\n  \"visit_id\": \"\",\r\n  \"external_id\": \"\",\r\n  \"begin_visit_date\": \"\",\r\n  \"end_visit_date\": \"\",\r\n  \"begin_created_on\": \"\",\r\n  \"end_created_on\": \"\",\r\n  \"begin_modified_on\": \"\",\r\n  \"end_modified_on\": \"\"\r\n}\r\n",
